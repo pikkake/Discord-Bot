@@ -50,10 +50,7 @@ class ReactionRoleAdd extends Command {
 			}
 
 			// check for number of reaction roles in current server
-			if (reacts.length >= 3 && !message.guild.premium) {
-				// You need to premium to create more reaction roles
-				return message.channel.send(message.translate('plugins/rr-add:NEED_PREMIUM'));
-			} else if (reacts.length >= 10) {
+			if (reacts.length >= 10) {
 				// You have reached max amout of reaction roles in this server
 				return message.channel.send(message.translate('plugins/rr-add:MAX_RR'));
 			} else {
